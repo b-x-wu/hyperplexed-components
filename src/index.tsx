@@ -1,11 +1,16 @@
 import React from 'react'
 import { createRoot } from 'react-dom/client'
+import { MagicalText } from '../components/magicalText'
 
 const App = () => {
     return (
-        <div className='text-4xl text-blue-900'>
-            This is a React App! Modify src/index.tsx to get started.
-        </div>
+        <>
+            This is just text
+            <MagicalText>
+                (This is the magical text!)
+            </MagicalText>
+            going around the magical text!
+        </>
     )
 }
 
