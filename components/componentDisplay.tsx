@@ -35,7 +35,7 @@ export const ComponentDisplay = ({
             <h2 style={titleStyle} className={`w-[${widthString}]`}><a href={titleHref}>{title}</a></h2>
     
     return (
-        <div className="flex flex-col gap-y-2 items-center">
+        <div className="flex flex-col gap-y-3 items-center">
             {
                 titleNode ?? <></>
             }
