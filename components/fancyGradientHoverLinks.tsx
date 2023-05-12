@@ -1,3 +1,6 @@
+// https://www.youtube.com/watch?v=oJYFRZ4cj2Q
+// Gradient sliding background over links
+
 import React, { useState } from "react";
 
 interface LinkInfo {
