@@ -10,27 +10,41 @@ interface ComponentDisplayProps {
     height: string | number
     children: React.ReactNode
     codeText?: string
-    customStyle?: React.CSSProperties
+    containerStyle?: React.CSSProperties
+    title?: string
+    titleHref?: string
+    titleStyle?: React.CSSProperties
 }
 
 export const ComponentDisplay = ({
     width,
     height,
     children,
-    customStyle,
+    containerStyle,
     codeText,
+    title,
+    titleStyle = {},
+    titleHref
 }: ComponentDisplayProps) => {
     const widthString = typeof width === 'string' ? width : `${width}px`
     const heightString = typeof height === 'string' ? height : `${height}px`
+
+    const titleNode = title == null ? <></> :
+        titleHref == null ?
+            <h2 style={titleStyle} className={`w-[${widthString}]`}>{title}</h2> :
+            <h2 style={titleStyle} className={`w-[${widthString}]`}><a href={titleHref}>{title}</a></h2>
     
     return (
-        <div className="flex flex-col md:flex-row gap-y-5 md:gap-x-5">
-            <div style={{ width: widthString, height: heightString, margin: 0, ...customStyle }}>
+        <div className="flex flex-col gap-y-2 items-center">
+            {
+                titleNode ?? <></>
+            }
+            <div style={{ width: widthString, height: heightString, margin: 0, ...containerStyle }}>
                 {children}
             </div>
             {
                 codeText == null ? <></> :
-                <SyntaxHighlighter language="tsx" style={materialDark} customStyle={{ width: widthString, height: heightString, margin: 0, ...customStyle }}>
+                <SyntaxHighlighter language="tsx" style={materialDark} customStyle={{ width: widthString, height: heightString, margin: 0, ...containerStyle }}>
                     {codeText}
                 </SyntaxHighlighter>
             }
