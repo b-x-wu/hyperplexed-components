@@ -1,6 +1,6 @@
 # Hyperplexed Components
 
-[Hyperplexed](https://www.youtube.com/@Hyperplexed) makes incredible YouTube videos detailing the thought process behind replicating top-tier front-end visual effects from around the web. In order to potentially make these visual effects fit better into future projects (and as some personal practice in front-end design), this project aims to convert these visual effects into reusable and customizable React components that leverage TypeScript and TailwindCSS.
+[Hyperplexed](https://www.youtube.com/@Hyperplexed) makes incredible YouTube videos detailing the thought process behind replicating top-tier front-end visual effects from around the web. In order to potentially make these visual effects fit better into future projects (and as some personal practice in front-end design), this project aims to convert these visual effects into reusable and customizable React components that leverage TypeScript and Tailwind CSS.
 
 ## Quick Start
 

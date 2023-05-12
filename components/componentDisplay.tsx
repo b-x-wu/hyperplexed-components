@@ -32,7 +32,7 @@ export const ComponentDisplay = ({
     const titleNode = title == null ? <></> :
         titleHref == null ?
             <h2 style={titleStyle} className={`w-[${widthString}]`}>{title}</h2> :
-            <h2 style={titleStyle} className={`w-[${widthString}]`}><a href={titleHref}>{title}</a></h2>
+            <h2 style={titleStyle} className={`w-[${widthString}]`}><a href={titleHref} target={'_blank'} className="hover:underline">{title}</a></h2>
     
     return (
         <div className="flex flex-col gap-y-3 items-center">
