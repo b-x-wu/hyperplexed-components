@@ -31,8 +31,8 @@ export const ComponentDisplay = ({
 
     const titleNode = title == null ? <></> :
         titleHref == null ?
-            <h2 style={titleStyle} className={`w-[${widthString}]`}>{title}</h2> :
-            <h2 style={titleStyle} className={`w-[${widthString}]`}><a href={titleHref} target={'_blank'} className="hover:underline">{title}</a></h2>
+            <h2 style={{ width: widthString, ...titleStyle }} >{title}</h2> :
+            <h2 style={{ width: widthString, ...titleStyle }} ><a href={titleHref} target={'_blank'} className="hover:underline">{title}</a></h2>
     
     return (
         <div className="flex flex-col gap-y-3 items-center">
@@ -44,7 +44,7 @@ export const ComponentDisplay = ({
             </div>
             {
                 codeText == null ? <></> :
-                <SyntaxHighlighter language="tsx" style={materialDark} customStyle={{ width: widthString, height: heightString, margin: 0, ...containerStyle }}>
+                <SyntaxHighlighter language="tsx" style={materialDark} customStyle={{ width: widthString, height: heightString, margin: 0, ...containerStyle }} wrapLongLines={true}>
                     {codeText}
                 </SyntaxHighlighter>
             }
